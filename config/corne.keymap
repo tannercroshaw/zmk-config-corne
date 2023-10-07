@@ -4,6 +4,9 @@
  * SPDX-License-Identifier: MIT
  */
 
+
+
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -16,15 +19,15 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-//      |  ESC |  Q  |  W  |  E  |  R  |  T  |      |  Y  |  U   |  I  |  O  |  P  | BKSP   |
+//  | CAPS ESC |  Q  |  W  |  E  |  R  |  T  |      |  Y  |  U   |  I  |  O  |  P  | BKSP   |
 //  | CTRL TAB |  A  |  S  |  D  |  F  |  G  |      |  H  |  J   |  K  |  L  |  ;  | SHFT ' |
-//     |SHFT - |  Z  |  X  |  C  |  V  |  B  |      |  N  |  M   |  ,  |  .  |  /  | CAPS = |
-//             | GUI [  |  L1 )  | SHFT ENT  |      | SPC L1 |  L2 )  |  ALT ]  |
+//     |ALT - |  Z  |  X  |  C  |  V  |  B  |      |  N  |  M   |  ,  |  .  |  /  | ALT = |
+//             | GUI [  |  L1 )  | SHFT ENT  |      | SPC L1 |  L2 )  |  CTRL ]  |
                         bindings = <
-   &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &mt CAPS ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &mt LCTRL TAB &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &mt RSHFT SQT
-   &mt LSHFT MINUS &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt CAPS EQUAL
-             &mt LGUI LBKT &lt 1 LPAR &mt LSHFT RET    &lt 1 SPACE &lt 2 RPAR &mt RALT RBKT
+   &mt LALT MINUS &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RALT EQUAL
+             &mt LGUI LBKT &lt 1 LPAR &mt LSHFT RET    &lt 1 SPACE &lt 2 RPAR &mt RCTRL RBKT
                         >;
                 };
 
@@ -34,13 +37,13 @@
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | DEL  |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT | BCSP| INS  |
-// | SHFT |     |     |     |     |     |   | HOME| PGUP| PGDN| END |VOLUP|VOLDN |
-//                    | GUI |     | ENT |   | SPC |     | ALT |
+// | ALT |     |     |     |     |     |   | HOME| PGUP| PGDN| END |VOLDN|VOLUP |
+//                    | GUI |     | ENT |   | SPC |     | CTRL |
                         bindings = <
    &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp DEL
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp BSPC &kp INS
-   &trans  &trans       &trans       &trans       &trans       &trans         &kp HOME   &kp PG_DN   &kp PG_UP &kp END   &kp K_VOL_UP &kp K_VOL_DN
-                            &trans     &trans       &kp RET      &kp SPACE  &trans   &trans
+   &trans  &trans       &trans       &trans       &trans       &trans         &kp HOME   &kp PG_DN   &kp PG_UP &kp END   &kp K_VOL_DN &kp K_VOL_UP
+                            &trans     &trans       &trans      &trans  &trans   &trans
                         >;
                 };
 
@@ -50,13 +53,13 @@
 // -----------------------------------------------------------------------------------------
 // |  ESC |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
 // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// | ALT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+//                    | GUI |     | SPC |   | ENT |     | CTRL |
                         bindings = <
    &trans  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
    &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
    &trans &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+                             &kp LGUI &trans   &trans   &trans   &trans    &kp RALT
                         >;
                 };
         };
