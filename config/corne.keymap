@@ -54,12 +54,12 @@
 // -----------------------------------------------------------------------------------------
 //        |  ` |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP   |
 //  | CTRL TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | SHFT ' |
-//     | ALT - |  1  |  2  |  3  |  4  |  5  |   |  -  |  =  |  [  |  ]  |  \  | ALT = |
+//     | ALT - |  6  |  7  |  8  |  9  |  0  |   |  -  |  =  |  [  |  ]  |  \  | ALT = |
 //                       | GUI [ |     | SPC |   | ENT |     | CTRL ] |
                         bindings = <
    &kp GRAVE  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
    &trans &kp N1  &kp N2   &kp N3  &kp N4  &kp N5       &kp N6 &kp N7  &kp N8  &kp N9  &kp N0 &trans
-   &trans &kp N1  &kp N2   &kp N3  &kp N4  &kp N5       &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &trans
+   &trans &kp N6 &kp N7  &kp N8  &kp N9  &kp N0       &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &trans
                              &trans &trans   &trans   &trans   &trans    &trans
                         >;
                 };
